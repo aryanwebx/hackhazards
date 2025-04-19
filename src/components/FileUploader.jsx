@@ -139,7 +139,7 @@ const FileUploader = ({colorbtn ,hvcolor}) => {
             <button 
               type="button" 
               onClick={removeFile}
-              className="text-gray-500 hover:text-red-500"
+              className="text-gray-500 hover:text-red-500 cursor-pointer"
               disabled={isLoading}
             >
               <X className="h-5 w-5" />
@@ -158,7 +158,7 @@ const FileUploader = ({colorbtn ,hvcolor}) => {
         <button
           type="submit"
           disabled={!file || isLoading}
-          className={`w-full ${colorbtn} ${hvcolor} text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center ${
+          className={`w-full ${colorbtn} ${hvcolor} text-white cursor-pointer font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center ${
             (!file || isLoading) ? 'opacity-70 cursor-not-allowed' : ''
           }`}
         >

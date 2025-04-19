@@ -17,7 +17,7 @@ const HomePage = () => {
               Scan any file for harmful content, spam, or sensitive material with our advanced analysis engine.
             </p>
             <div className="mt-10">
-              <FileUploader />
+              <FileUploader colorbtn="bg-indigo-800" hvcolor="bg-indigo-700"/>
             </div>
           </div>
           

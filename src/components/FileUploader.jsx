@@ -11,7 +11,7 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
   const [result, setResult] = useState(null);
   const fileInputRef = useRef(null);
 
-  // Supported file types (removed 'pdf')
+  // Supported file types
   const supportedAudioFormats = ['audio/flac', 'audio/mpeg', 'audio/mp4', 'audio/ogg', 'audio/wav', 'audio/webm'];
   const supportedImageFormats = ['image/jpeg', 'image/png', 'image/webp'];
   const supportedTextExtensions = ['txt', 'doc', 'docx'];

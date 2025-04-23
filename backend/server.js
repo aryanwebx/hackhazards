@@ -12,7 +12,7 @@ app.use('/moderate-text', require('./routes/textModeration'));
 app.use('/moderate-image', require('./routes/imageModeration'));
 app.use('/moderate-audio', require('./routes/audioModeration'));
 
-app.get('/',(req,res=>{
+app.get('/',(req,res)=>{
     res.send({
         activeStatus:true,
         error:false,

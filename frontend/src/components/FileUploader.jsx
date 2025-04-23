@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Upload, FileType, X, Loader2, AlertCircle } from 'lucide-react';
+import { Upload, FileType, X, Loader2, AlertCircle,ShieldCheck,ShieldX,Info,FileText, } from 'lucide-react';
 import axios from 'axios';
 import mammoth from 'mammoth';
 
@@ -8,7 +8,7 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
   const [isDragging, setIsDragging] = useState(false);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState(true);
   const fileInputRef = useRef(null);
 
   // Supported file types
@@ -270,26 +270,52 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
       </form>
 
       {result && (
-        <div className="mt-6 bg-white rounded-lg shadow-md p-6 border border-gray-200">
-          <h3 className="text-lg font-medium text-gray-800 mb-4">Analysis Results</h3>
-          <div className="space-y-4">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Result:</p>
-              <p className="text-sm text-gray-800">{result.result || 'No result available'}</p>
+        <div className="mt-8 bg-white rounded-2xl shadow-lg border border-gray-200 p-6 transition-all duration-300">
+          <div className="flex items-center gap-3 mb-4">
+            <FileText className="text-blue-600" size={20} />
+            <h3 className="text-xl font-semibold text-gray-800">Analysis Results</h3>
+          </div>
+
+          <div className="space-y-6">
+            {/* Result */}
+            <div className="flex items-start gap-3">
+              <Info className="text-gray-500 mt-1" size={18} />
+              <div>
+                <p className="flex text-sm font-semibold text-gray-600">Result</p>
+                <p className="text-base text-gray-800 mt-1">
+                  {result.result || 'No result available'}
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="text-sm font-medium text-gray-600">Classification:</p>
-              <p
-                className={`text-sm font-semibold ${
-                  result.classification === 'safe' ? 'text-green-600' : 'text-red-600'
-                }`}
-              >
-                {getClassificationText(result.classification)}
-              </p>
+
+            {/* Classification */}
+            <div className="flex items-start gap-3">
+              {result.classification === 'safe' ? (
+                <ShieldCheck className="text-green-600 mt-1" size={18} />
+              ) : (
+                <ShieldX className="text-red-600 mt-1" size={18} />
+              )}
+              <div>
+                <p className="text-sm font-semibold text-gray-600">Classification</p>
+                <p
+                  className={`text-base font-bold mt-1 ${
+                    result.classification === 'safe' ? 'text-green-600' : 'text-red-600'
+                  }`}
+                >
+                  {getClassificationText(result.classification)}
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="text-sm font-medium text-gray-600">Details:</p>
-              <p className="text-sm text-gray-800">{result.details || 'No details available'}</p>
+
+            {/* Details */}
+            <div className="flex items-start gap-3">
+              <Info className="text-gray-500 mt-1" size={18} />
+              <div>
+                <p className="flex text-sm font-semibold text-gray-600">Details</p>
+                <p className="text-base text-gray-800 mt-1">
+                  {result.details || 'No details available'}
+                </p>
+              </div>
             </div>
           </div>
         </div>

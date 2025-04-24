@@ -89,7 +89,7 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
       if (supportedAudioFormats.includes(file.type)) {
         const formData = new FormData();
         formData.append('audio', file);
-        response = await axios.post('http://localhost:3001/moderate-audio', formData, {
+        response = await axios.post('https://hackhazards-backend.onrender.com/moderate-audio', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -97,7 +97,7 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
       } else if (supportedImageFormats.includes(file.type)) {
         const formData = new FormData();
         formData.append('image', file);
-        response = await axios.post('http://localhost:3001/moderate-image', formData, {
+        response = await axios.post('https://hackhazards-backend.onrender.com/moderate-image', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -123,7 +123,7 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
           return;
         }
 
-        response = await axios.post('http://localhost:3001/moderate-text', {
+        response = await axios.post('https://hackhazards-backend.onrender.com/moderate-text', {
           text: textContent,
         }, {
           headers: {

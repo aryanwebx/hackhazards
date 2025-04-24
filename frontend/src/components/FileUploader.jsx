@@ -304,19 +304,10 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
           <div className="space-y-6">
             {/* Result */}
             <div className="flex items-start gap-3">
-<<<<<<< HEAD
-              <span>
-                <Info className="text-gray-500 mt-1" size={18} />
-              </span>
-              <div>
-                <p className="flex text-m font-semibold text-gray-700">Result</p>
-                <p className="text-base text-start text-gray-800 mt-1">
-=======
               <Info className="text-gray-500 mt-1" size={18} />
               <div>
                 <p className="flex text-sm font-semibold text-gray-600">Result</p>
                 <p className="text-base text-gray-800 mt-1">
->>>>>>> cc473562098bf87bc34247be1671d447f8d36a36
                   {result.result || 'No result available'}
                 </p>
               </div>
@@ -324,19 +315,6 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
 
             {/* Classification */}
             <div className="flex items-start gap-3">
-<<<<<<< HEAD
-              <span>
-                {result.classification === 'safe' ? (
-                  <ShieldCheck className="text-green-600 mt-1" size={18} />
-                ) : (
-                  <ShieldX className="text-red-600 mt-1" size={18} />
-                )}
-              </span>
-              <div>
-                <p className="text-m font-semibold text-gray-700">Classification</p>
-                <p
-                  className={`text-base text-start font-bold mt-1 ${
-=======
               {result.classification === 'safe' ? (
                 <ShieldCheck className="text-green-600 mt-1" size={18} />
               ) : (
@@ -346,7 +324,6 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
                 <p className="text-sm font-semibold text-gray-600">Classification</p>
                 <p
                   className={`text-base font-bold mt-1 ${
->>>>>>> cc473562098bf87bc34247be1671d447f8d36a36
                     result.classification === 'safe' ? 'text-green-600' : 'text-red-600'
                   }`}
                 >
@@ -357,19 +334,10 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
 
             {/* Details */}
             <div className="flex items-start gap-3">
-<<<<<<< HEAD
-              <span className='mt-1'>
-                <Info className="text-gray-500" size={18} />
-              </span>
-              <div>
-                <p className="flex text-m font-semibold text-gray-700">Details</p>
-                <p className="text-base text-gray-800 mt-1 text-start">
-=======
               <Info className="text-gray-500 mt-1" size={18} />
               <div>
                 <p className="flex text-sm font-semibold text-gray-600">Details</p>
                 <p className="text-base text-gray-800 mt-1">
->>>>>>> cc473562098bf87bc34247be1671d447f8d36a36
                   {result.details || 'No details available'}
                 </p>
               </div>

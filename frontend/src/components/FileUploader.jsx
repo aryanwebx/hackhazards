@@ -8,7 +8,7 @@ const FileUploader = ({ colorbtn = 'bg-indigo-600', hvcolor = 'hover:bg-indigo-7
   const [isDragging, setIsDragging] = useState(false);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [result, setResult] = useState(true);
+  const [result, setResult] = useState(null);
   const fileInputRef = useRef(null);
 
   // Supported file types

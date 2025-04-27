@@ -14,7 +14,7 @@
 
 ## 🎯 Objective
 
-SafeNet tackles the problem of harmful online content by providing real-time detection and protection for users. It serves individuals, parents, educators, and organizations who want a safer browsing experience, especially for children and students. By helping users avoid toxic, explicit, or violent content, SafeNet creates a safer internet environment and offers peace of mind through easy-to-use, proactive protection.
+SafeNet addresses the problem of harmful online content by allowing users to upload files for real-time analysis. It scans images, text files, and audio to detect explicit or unsafe content, classifying them as safe or unsafe. Designed for individuals, parents, educators, and organizations, SafeNet helps create a safer digital space, especially for children and students, through an easy-to-use, proactive upload system.
 
 ---
 

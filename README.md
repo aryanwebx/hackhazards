@@ -14,8 +14,7 @@
 
 ## 🎯 Objective
 
-What problem does your project solve, and who does it serve?  
-Briefly describe the real-world use case and the value it provides.
+SafeNet tackles the problem of harmful online content by providing real-time detection and protection for users. It serves individuals, parents, educators, and organizations who want a safer browsing experience, especially for children and students. By helping users avoid toxic, explicit, or violent content, SafeNet creates a safer internet environment and offers peace of mind through easy-to-use, proactive protection.
 
 ---
 
@@ -135,5 +134,6 @@ List improvements, extensions, or follow-up features:
 ## 🏁 Final Words
 
 Share your hackathon journey — challenges, learnings, fun moments, or shout-outs!
+
 
 ---
